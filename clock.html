@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+            font-size: 4.5rem;
+        }
+        
+        .container {
+            display: flex;
+            padding: 12%;
+        }
+        
+        span {
+            margin: auto;
+            font-family:monospace ;
+            letter-spacing: 50%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <span id="hour"></span>
+        <span id="minute"></span>
+        <span id="second"></span>
+    </div>
+
+    <script>
+
+        setInterval(() => {
+
+            var T = new Date();
+            var hour = T.getHours();
+            var minute = T.getMinutes();
+            var second = T.getSeconds();
+
+            document.getElementById("hour").innerHTML = hour + ":";
+            document.getElementById("minute").innerHTML = minute + ":";
+            document.getElementById("second").innerHTML = second;
+
+
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
